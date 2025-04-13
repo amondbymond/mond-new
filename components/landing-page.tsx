@@ -168,8 +168,8 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col break-keep-all">
       {/* 네비게이션 바 - 모바일 최적화 */}
-      <header className="fixed top-0 left-0 right-0 flex justify-between items-center py-4 border-b border-[#e6e8eb] bg-white z-50">
-        <div className="w-full px-2 sm:container-custom flex justify-between items-center">
+      <header className="fixed top-0 left-0 right-0 flex justify-between items-center px-4 sm:px-8 py-4 border-b border-[#e6e8eb] bg-white z-50">
+        <div className="container-custom flex justify-between items-center w-full">
           <div>
             <div className="h-8 flex items-center">
               <img src="/logo.png" alt="amond 로고" className="h-8 w-auto" />
