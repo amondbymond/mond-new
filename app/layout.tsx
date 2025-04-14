@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "아몬드 - 텍스트 기반 AI 콘텐츠 제작 서비스@@@@",
+    title: "아몬드 - 텍스트 기반 AI 콘텐츠 제작 서비스",
     description: "주제별 트렌드에 딱 맞는 터지는 콘텐츠 기획을 쉽고 간편하게 시작해보세요!",
     images: [
       {

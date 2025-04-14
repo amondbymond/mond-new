@@ -201,7 +201,7 @@ export default function LandingPage() {
             >
               터지는 SNS 텍스트 콘텐츠,
               <br />
-              아몬드 하나면 끝.
+              아몬드 하나면 끝. 테스트
             </h2>
             <p className="text-base sm:text-lg text-[#252525] mb-10 break-keep-all leading-moderate">
               팔로워 증가, 매출 증진, 상품 홍보까지. SNS 성장을 위한 콘텐츠가 필요하신가요?
