@@ -73,8 +73,8 @@ export function ContentCarousel() {
   ]
 
   return (
-    <section className="px-8 py-16 md:py-20 bg-white">
-      <div className="container-custom" style={{ maxWidth: "1080px" }}>
+    <section className="py-16 md:py-20 bg-white">
+      <div className="container-custom px-8" style={{ maxWidth: "1080px" }}>
         <div
           ref={titleRef}
           className={`text-center mb-10 transition-all duration-1000 ease-out ${
@@ -94,11 +94,11 @@ export function ContentCarousel() {
       <div className="relative">
         <div
           ref={cardsRef}
-          className="flex overflow-x-auto pb-8 px-8 hide-scrollbar"
+          className="flex overflow-x-auto pb-8 hide-scrollbar"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {/* 모바일에서 첫 화면이 더 왼쪽으로 이동하도록 패딩 조정 */}
-          <div className="pl-[calc(50%-540px-40px)]"></div> {/* 왼쪽 패딩 줄임 */}
+          <div className="pl-8 md:pl-[calc(50%-540px-40px)]"></div> {/* 왼쪽 패딩 수정 */}
           {contentCards.map((card, index) => (
             <ContentCard
               key={index}
@@ -109,7 +109,7 @@ export function ContentCarousel() {
               isVisible={cardsVisible}
             />
           ))}
-          <div className="pr-[calc(50%-540px)]"></div> {/* 오른쪽 패딩 유지 */}
+          <div className="pr-4 md:pr-[calc(50%-540px)]"></div> {/* 오른쪽 패딩 수정 */}
         </div>
       </div>
     </section>
