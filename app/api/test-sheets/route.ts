@@ -1,9 +1,6 @@
 import { NextResponse } from "next/server"
 import { getGoogleSheetsClient } from "@/lib/google-sheets"
 
-// Node.js 런타임 사용 명시
-export const runtime = "edge"
-
 export async function GET() {
   try {
     console.log("Google Sheets 연결 테스트 시작")

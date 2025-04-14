@@ -1,10 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { google } from "googleapis"
 
-// Node.js 런타임 사용 명시
-export const runtime = "edge"
-
-// 간소화된 직접 구현 방식
 export async function POST(request: NextRequest) {
   console.log("API 호출 시작")
 

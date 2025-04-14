@@ -1,8 +1,5 @@
 import { NextResponse } from "next/server"
 
-// Node.js 런타임 사용 명시
-export const runtime = "edge"
-
 export async function GET() {
   try {
     console.log("API 테스트 시작")

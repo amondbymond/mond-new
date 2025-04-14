@@ -1,11 +1,6 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "version": 2,
-  "buildCommand": "next build",
-  "devCommand": "next dev",
-  "framework": "nextjs",
   "functions": {
-    "api/**/*.ts": {
+    "app/api/**/*": {
       "runtime": "nodejs18.x"
     }
   }
