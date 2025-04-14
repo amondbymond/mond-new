@@ -251,7 +251,8 @@ export default function LandingPage() {
 
             <div className="text-2xl sm:text-3xl leading-loose font-bold text-[#333333]">
               <div>
-                아몬드는 6월에 정식 출시 예정이에요. 💌 이메일과 번호를 알려주시면, 정식 오픈 소식을 전해드릴게요!
+                아몬드는 6월에 정식 출시 예정이에요. 💌 이메일과 번호를 알려주시면, <br />
+                정식 오픈 소식을 전해드릴게요!
               </div>
             </div>
           </div>
