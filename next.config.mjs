@@ -3,15 +3,19 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['v0.blob.com', 'res.cloudinary.com'],
+    domains: ['v0.blob.com'],
   },
-  // Simplified webpack configuration for video files
+  // 비디오 파일 처리를 위한 웹팩 설정
   webpack(config) {
     config.module.rules.push({
       test: /\.(mp4|webm)$/,
-      type: 'asset/resource',
-      generator: {
-        filename: 'static/videos/[name].[hash][ext]',
+      use: {
+        loader: 'file-loader',
+        options: {
+          publicPath: '/_next/static/videos/',
+          outputPath: 'static/videos/',
+          name: '[name].[hash].[ext]',
+        },
       },
     });
 
