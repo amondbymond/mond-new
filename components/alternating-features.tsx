@@ -1,7 +1,7 @@
 "use client"
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 
 export function AlternatingFeatures() {
   const { ref: title1Ref, isVisible: title1Visible } = useScrollAnimation(0.1)
@@ -13,38 +13,15 @@ export function AlternatingFeatures() {
   const [video1Loaded, setVideo1Loaded] = useState(false)
   const [video2Loaded, setVideo2Loaded] = useState(false)
 
-  // 비디오 요소 참조
-  const video1Ref = useRef<HTMLVideoElement>(null)
-  const video2Ref = useRef<HTMLVideoElement>(null)
-
   // Cloudinary 비디오 URL 사용
   const video1Url = "https://res.cloudinary.com/detpylhyc/video/upload/v1744198868/ftqkodujvmwsbt79cpkm.mp4"
   const video2Url = "https://res.cloudinary.com/detpylhyc/video/upload/v1744198868/bbi8uz1wzl7nhvkqnxnw.mp4"
 
-  // 비디오 로딩 확인 - 수정된 방식
+  // 비디오 로딩 확인
   useEffect(() => {
-    // 비디오 로드 이벤트 핸들러
-    const handleVideo1Load = () => setVideo1Loaded(true)
-    const handleVideo2Load = () => setVideo2Loaded(true)
-
-    // 비디오가 이미 로드되었는지 확인
-    if (video1Ref.current?.readyState >= 3) {
-      setVideo1Loaded(true)
-    }
-
-    if (video2Ref.current?.readyState >= 3) {
-      setVideo2Loaded(true)
-    }
-
-    // 이벤트 리스너 등록
-    video1Ref.current?.addEventListener("loadeddata", handleVideo1Load)
-    video2Ref.current?.addEventListener("loadeddata", handleVideo2Load)
-
-    // 클린업 함수
-    return () => {
-      video1Ref.current?.removeEventListener("loadeddata", handleVideo1Load)
-      video2Ref.current?.removeEventListener("loadeddata", handleVideo2Load)
-    }
+    // Cloudinary 비디오는 항상 사용 가능하다고 가정합니다
+    setVideo1Loaded(true)
+    setVideo2Loaded(true)
   }, [])
 
   return (
@@ -77,9 +54,8 @@ export function AlternatingFeatures() {
                     marginBottom: "2px",
                   }}
                 >
-                  {video1Url ? (
+                  {video1Loaded ? (
                     <video
-                      ref={video1Ref}
                       className="w-full"
                       style={{
                         width: "calc(100% + 2px)",
@@ -137,9 +113,8 @@ export function AlternatingFeatures() {
             <div className="flex flex-col md:flex-row-reverse">
               <div className="md:w-1/2 flex items-center justify-center">
                 <div className="w-full flex items-center justify-center overflow-hidden">
-                  {video2Url ? (
+                  {video2Loaded ? (
                     <video
-                      ref={video2Ref}
                       className="w-full rounded-xl"
                       style={{ borderRadius: "12px" }}
                       autoPlay

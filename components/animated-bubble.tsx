@@ -1,46 +1,30 @@
 "use client"
 
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 
 export function AnimatedBubble() {
   const [position, setPosition] = useState(0)
   const [direction, setDirection] = useState(1)
-  const animationRef = useRef<number | null>(null)
-  const lastUpdateRef = useRef<number>(0)
 
-  // requestAnimationFrame을 사용한 최적화된 애니메이션
   useEffect(() => {
-    const animate = (timestamp: number) => {
-      // 60fps로 제한 (약 16.7ms마다 업데이트)
-      if (timestamp - lastUpdateRef.current >= 16.7) {
-        lastUpdateRef.current = timestamp
+    const interval = setInterval(() => {
+      setPosition((prev) => {
+        // 위아래로 움직이는 범위 (픽셀)
+        const maxOffset = 8
 
-        setPosition((prev) => {
-          // 위아래로 움직이는 범위 (픽셀)
-          const maxOffset = 8
+        // 현재 위치가 최대치에 도달하면 방향 전환
+        if (prev >= maxOffset) {
+          setDirection(-1)
+        } else if (prev <= -maxOffset) {
+          setDirection(1)
+        }
 
-          // 현재 위치가 최대치에 도달하면 방향 전환
-          if (prev >= maxOffset) {
-            setDirection(-1)
-          } else if (prev <= -maxOffset) {
-            setDirection(1)
-          }
+        // 현재 위치에 방향을 곱해 새 위치 계산 (부드러운 움직임을 위해 작은 값 사용)
+        return prev + direction * 0.4
+      })
+    }, 50)
 
-          // 현재 위치에 방향을 곱해 새 위치 계산
-          return prev + direction * 0.4
-        })
-      }
-
-      animationRef.current = requestAnimationFrame(animate)
-    }
-
-    animationRef.current = requestAnimationFrame(animate)
-
-    return () => {
-      if (animationRef.current !== null) {
-        cancelAnimationFrame(animationRef.current)
-      }
-    }
+    return () => clearInterval(interval)
   }, [direction])
 
   return (

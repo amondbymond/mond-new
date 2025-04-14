@@ -7,20 +7,16 @@ export function useScrollAnimation(threshold = 0.1) {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    // 최적화된 IntersectionObserver 사용
     const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries
+      ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true)
-          // 한 번 보이면 더 이상 관찰하지 않음
+          // Once the element is visible, we can stop observing it
           if (ref.current) observer.unobserve(ref.current)
         }
       },
       {
-        threshold,
-        // 루트 마진 추가로 약간 일찍 애니메이션 시작
-        rootMargin: "50px",
+        threshold, // Trigger when at least 10% of the element is visible
       },
     )
 
