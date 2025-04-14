@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server"
 import { google } from "googleapis"
 
+// Node.js 런타임 사용 명시
+export const runtime = "nodejs"
+
 export async function GET() {
   try {
     console.log("Google Sheets 모듈 테스트 시작")
