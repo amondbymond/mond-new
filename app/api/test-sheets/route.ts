@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import { getGoogleSheetsClient } from "@/lib/google-sheets"
 
 // Node.js 런타임 사용 명시
-export const runtime = "nodejs"
+export const runtime = "edge"
 
 export async function GET() {
   try {
