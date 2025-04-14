@@ -42,28 +42,33 @@ export function ContentCarousel() {
   const contentCards = [
     {
       title: "릴스",
-      description: "서비스 분점에 집중한 콘텐츠를 기획하세요.",
-      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-Jl3vLFmviBZTkxnYpj72GFnTHMBHzZ.png",
+      description: "서비스 본질에 집중한 콘텐츠를 기획하세요.",
+      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun01-W3F95mdsdbBgQDTeudQmsKSRZnOriS.png", // fun01.png
     },
     {
       title: "SNS 이벤트",
-      description: "신규 고객 모집/신제품 홍보 이벤트를 기획해요.",
-      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-Hf8dUiFFSHzl0HbnVUZMaCyQSrRbkK.png",
+      description: "신규 고객 모집/신제품 홍보 이벤트를 기획하세요.",
+      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun02-F2FlC1OuRIpXbCnrEdopPgXCIoWXCV.png", // fun02.png
     },
     {
       title: "체험단 이벤트",
-      description: "잠재적 고객을 모집하는 이벤트를 기획해요.",
-      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-v8D6MAS1LkwPpccfojtWOYXjSUyMPT.png",
+      description: "잠재적 고객을 모집하는 이벤트를 기획하세요.",
+      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun03-UcQT1uzxgSjDtIYeZXnKi2UBoGsiRE.png", // fun03.png
+    },
+    {
+      title: "정보성 콘텐츠",
+      description: "고객이 필요로 하는 정보를 제공하세요.",
+      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun04-IEijvLykJiX8ghTZesMD7MIFrpwKGZ.png", // fun04.png
     },
     {
       title: "프로모션 기획",
       description: "신제품 홍보를 효과적으로 할 수 있어요.",
-      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-pSsN2wpyz0G18czHoIeCl7d8TavsYe.png",
+      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun05-1pNwRTUfFWq5kdDSdfRt3pVUIL27oe.png", // fun05.png
     },
     {
       title: "시즈널 콘텐츠",
       description: "지금 이시각, 고객이 가장 관심 있는 주제로 콘텐츠를 기획하세요.",
-      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-ezHXwVxbTNLfkkY9fT8dCK6vILK5GP.png",
+      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun06-iUfTvJLFdbkOCD2N0ysasaMOYZijDS.png", // fun06.png
     },
   ]
 
@@ -92,7 +97,8 @@ export function ContentCarousel() {
           className="flex overflow-x-auto pb-8 px-8 hide-scrollbar"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          <div className="pl-[calc(50%-540px)]"></div> {/* Left padding to center */}
+          {/* 모바일에서 첫 화면이 더 왼쪽으로 이동하도록 패딩 조정 */}
+          <div className="pl-[calc(50%-540px-40px)]"></div> {/* 왼쪽 패딩 줄임 */}
           {contentCards.map((card, index) => (
             <ContentCard
               key={index}
@@ -103,7 +109,7 @@ export function ContentCarousel() {
               isVisible={cardsVisible}
             />
           ))}
-          <div className="pr-[calc(50%-540px)]"></div> {/* Right padding to center */}
+          <div className="pr-[calc(50%-540px)]"></div> {/* 오른쪽 패딩 유지 */}
         </div>
       </div>
     </section>

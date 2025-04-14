@@ -256,7 +256,10 @@ export default function LandingPage() {
             {/* 두 번째 여백 3배 증가 */}
             <div className="my-6"></div>
 
-            <div>를 무료로 드릴게요. 뉴스레터와 쿠폰을 받을 이메일과 전화번호를 남겨주세요.</div>
+            {/* 자간 1.2배 증가 */}
+            <div style={{ letterSpacing: "0.05em" }}>
+              를 무료로 드릴게요. 뉴스레터와 쿠폰을 받을 이메일과 전화번호를 남겨주세요.
+            </div>
           </div>
 
           <form onSubmit={handleSubmit} className="text-left">
