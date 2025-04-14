@@ -11,6 +11,9 @@ import { AlternatingFeatures } from "./alternating-features"
 import { AnimatedBubble } from "./animated-bubble"
 
 export default function LandingPage() {
+  // Add build version constant
+  const buildVersion = "v102" // Current build version
+
   const [showModal, setShowModal] = useState(false)
   const [heroVisible, setHeroVisible] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -167,20 +170,24 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen flex flex-col break-keep-all">
-      {/* 네비게이션 바 */}
-      <header className="fixed top-0 left-0 right-0 flex justify-between items-center px-8 py-4 border-b border-[#e6e8eb] bg-white z-50">
+      {/* 네비게이션 바 - 모바일 최적화 */}
+      <header className="fixed top-0 left-0 right-0 flex justify-between items-center px-4 sm:px-8 py-4 border-b border-[#e6e8eb] bg-white z-50">
         <div className="container-custom flex justify-between items-center w-full">
           <div>
             <div className="h-8 flex items-center">
               <img src="/logo.png" alt="amond 로고" className="h-8 w-auto" />
             </div>
           </div>
-          <button
-            className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-6 py-2 rounded-lg transition-colors border-none cursor-pointer"
-            onClick={scrollToContact}
-          >
-            1개월 무료 구독하기
-          </button>
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-gray-500 hidden sm:inline">{buildVersion}</span>
+            <button
+              className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-3 sm:px-6 py-2 rounded-lg transition-colors border-none cursor-pointer text-sm sm:text-base whitespace-nowrap"
+              onClick={scrollToContact}
+            >
+              <span className="hidden sm:inline">1개월 무료 구독하기</span>
+              <span className="sm:hidden">무료체험</span>
+            </button>
+          </div>
         </div>
       </header>
 
