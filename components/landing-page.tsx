@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState, type FormEvent } from "react"
+import { useEffect, useState, type FormEvent, useRef } from "react"
 import { SuccessModal } from "./success-modal"
 import { ContentTabs } from "./content-tabs"
 import { FeatureBoxes } from "./feature-boxes"
@@ -11,14 +11,15 @@ import { AlternatingFeatures } from "./alternating-features"
 import { AnimatedBubble } from "./animated-bubble"
 
 export default function LandingPage() {
-  // Add build version constant
-  const buildVersion = "v102" // Current build version
+  // 빌드 버전 표시
+  const buildVersion = "v108" // 현재 빌드 버전
 
   const [showModal, setShowModal] = useState(false)
   const [heroVisible, setHeroVisible] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formError, setFormError] = useState<string | null>(null)
   const { handlePhoneChange } = usePhoneFormat()
+  const patternRef = useRef<HTMLDivElement>(null)
 
   // Hero animation on load
   useEffect(() => {
@@ -86,12 +87,8 @@ export default function LandingPage() {
       timestamp: new Date().toISOString(),
     }
 
-    console.log("폼 데이터:", formDataObj)
-
     // API 호출
     try {
-      console.log("API 호출 시작")
-
       // 수정된 부분: fetch 요청 및 응답 처리 개선
       const response = await fetch("/api/submit", {
         method: "POST",
@@ -101,20 +98,16 @@ export default function LandingPage() {
 
       // 응답 텍스트 먼저 가져오기
       const responseText = await response.text()
-      console.log("API 응답 텍스트:", responseText)
 
       // 응답이 비어있지 않은 경우에만 JSON으로 파싱
       let responseData
       if (responseText) {
         try {
           responseData = JSON.parse(responseText)
-          console.log("API 응답 데이터:", responseData)
         } catch (parseError) {
-          console.error("API 응답 파싱 오류:", parseError)
           throw new Error("서버 응답을 처리할 수 없습니다.")
         }
       } else {
-        console.error("API 응답이 비어있습니다.")
         throw new Error("서버로부터 응답이 없습니다.")
       }
 
@@ -128,7 +121,6 @@ export default function LandingPage() {
       // 성공 모달 표시
       setShowModal(true)
     } catch (error) {
-      console.error("데이터 제출 실패:", error)
       setFormError(`제출 중 오류가 발생했습니다: ${error instanceof Error ? error.message : "알 수 없는 오류"}`)
     } finally {
       setIsSubmitting(false)
@@ -150,22 +142,27 @@ export default function LandingPage() {
     }
   }
 
-  // 배경 패턴 생성
+  // 배경 패턴 생성 - 최적화된 방식
   useEffect(() => {
-    const pattern = document.getElementById("pattern")
-    if (pattern) {
-      for (let i = 0; i < 20; i++) {
-        const item = document.createElement("div")
-        item.className = "pattern-item"
-        item.textContent = "+"
-        item.style.top = `${Math.random() * 100}%`
-        item.style.left = `${Math.random() * 100}%`
-        item.style.fontSize = `${Math.random() * 20 + 10}px`
-        item.style.opacity = `${Math.random() * 0.5 + 0.1}`
-        item.style.transform = `rotate(${Math.random() * 360}deg)`
-        pattern.appendChild(item)
-      }
+    const pattern = patternRef.current
+    if (!pattern) return
+
+    // 패턴 요소 생성을 위한 DocumentFragment 사용
+    const fragment = document.createDocumentFragment()
+
+    for (let i = 0; i < 20; i++) {
+      const item = document.createElement("div")
+      item.className = "pattern-item"
+      item.textContent = "+"
+      item.style.top = `${Math.random() * 100}%`
+      item.style.left = `${Math.random() * 100}%`
+      item.style.fontSize = `${Math.random() * 20 + 10}px`
+      item.style.opacity = `${Math.random() * 0.5 + 0.1}`
+      item.style.transform = `rotate(${Math.random() * 360}deg)`
+      fragment.appendChild(item)
     }
+
+    pattern.appendChild(fragment)
   }, [])
 
   return (
@@ -194,7 +191,7 @@ export default function LandingPage() {
       {/* 메인 히어로 섹션 */}
       <main className="px-8 pt-32 pb-16 md:pt-36 md:pb-20 relative bg-gradient-to-b from-white to-[#FAFAFA]">
         {/* 배경 패턴 */}
-        <div id="pattern" className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none"></div>
+        <div ref={patternRef} className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none"></div>
 
         <div
           className={`container-custom transition-all duration-1000 ease-out ${
