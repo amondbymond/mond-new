@@ -1,50 +1,53 @@
-import { CardCarousel } from "@/components/card-carousel"
+import { SimpleCarousel } from "@/components/simple-carousel"
 
 export default function Home() {
-  // 샘플 카드 데이터
-  const cards = [
+  // 트렌드 카드 데이터
+  const trendCards = [
     {
       id: 1,
-      title: "첫 번째 카드",
-      content: "이것은 첫 번째 카드의 내용입니다. 왼쪽으로 슬라이드하여 더 많은 카드를 확인하세요.",
+      title: "릴스",
+      description: "서비스 본질에 집중한 콘텐츠를 기획하세요.",
+      image: "/placeholder.svg?height=300&width=400",
     },
     {
       id: 2,
-      title: "두 번째 카드",
-      content: "이것은 두 번째 카드의 내용입니다. 계속해서 슬라이드하여 모든 카드를 확인하세요.",
+      title: "SNS 이벤트",
+      description: "참여를 유도하는 이벤트로 고객과 소통하세요.",
+      image: "/placeholder.svg?height=300&width=400",
     },
     {
       id: 3,
-      title: "세 번째 카드",
-      content: "이것은 세 번째 카드의 내용입니다. 마지막 카드입니다.",
+      title: "체험단",
+      description: "실제 사용자의 경험을 통해 신뢰를 쌓으세요.",
+      image: "/placeholder.svg?height=300&width=400",
+    },
+    {
+      id: 4,
+      title: "프로모션",
+      description: "효과적인 프로모션으로 매출을 증대하세요.",
+      image: "/placeholder.svg?height=300&width=400",
     },
   ]
 
   return (
-    <main className="min-h-screen p-4 md:p-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">랜딩 페이지</h1>
+    <main className="min-h-screen bg-[#e6f2f5] p-4">
+      <div className="max-w-md mx-auto">
+        <h1 className="text-2xl font-bold text-[#FF9500] mb-2 text-center">
+          1천 개 이상의 분야별 트렌드 콘텐츠 아이디어
+        </h1>
 
-      {/* 모바일에서 두 번째 카드가 살짝 보이는 캐러셀 */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">특별 기능</h2>
-        <div className="md:px-12">
-          <CardCarousel cards={cards} className="mb-8" />
-        </div>
-        <p className="text-center text-sm text-gray-500 mt-2">← 좌우로 슬라이드하여 더 많은 내용을 확인하세요 →</p>
-      </section>
+        <h2 className="text-xl font-bold text-center mb-6">
+          릴스, SNS 이벤트, 체험단,
+          <br />
+          프로모션 등<br />
+          모든 콘텐츠를 한 곳에
+        </h2>
 
-      {/* 추가 콘텐츠 섹션 */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">주요 기능</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {cards.map((card) => (
-            <div key={card.id} className="p-6 bg-white rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">{card.title}</h3>
-              <p>{card.content}</p>
-            </div>
-          ))}
+        {/* 두 번째 카드가 살짝 보이는 트렌드 캐러셀 */}
+        <div className="mb-8">
+          <SimpleCarousel cards={trendCards} />
         </div>
-      </section>
+      </div>
     </main>
   )
 }
