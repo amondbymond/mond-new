@@ -10,10 +10,10 @@ import { usePhoneFormat } from "@/hooks/use-phone-format"
 import { AlternatingFeatures } from "./alternating-features"
 import { AnimatedBubble } from "./animated-bubble"
 
-// 빌드 버전 정보
-const BUILD_VERSION = "v102"
-
 export default function LandingPage() {
+  // Add build version constant
+  const buildVersion = "v102" // Current build version
+
   const [showModal, setShowModal] = useState(false)
   const [heroVisible, setHeroVisible] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -173,13 +173,13 @@ export default function LandingPage() {
       {/* 네비게이션 바 - 모바일 최적화 */}
       <header className="fixed top-0 left-0 right-0 flex justify-between items-center px-4 sm:px-8 py-4 border-b border-[#e6e8eb] bg-white z-50">
         <div className="container-custom flex justify-between items-center w-full">
-          <div className="flex items-center">
+          <div>
             <div className="h-8 flex items-center">
               <img src="/logo.png" alt="amond 로고" className="h-8 w-auto" />
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-xs text-gray-500 font-mono">{BUILD_VERSION}</span>
+            <span className="text-xs text-gray-500 hidden sm:inline">{buildVersion}</span>
             <button
               className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-3 sm:px-6 py-2 rounded-lg transition-colors border-none cursor-pointer text-sm sm:text-base whitespace-nowrap"
               onClick={scrollToContact}
