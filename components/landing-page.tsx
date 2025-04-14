@@ -250,14 +250,8 @@ export default function LandingPage() {
             </div>
 
             <div className="text-2xl sm:text-3xl leading-loose font-bold text-[#333333]">
-              <div>아몬드는 6월에 정식 출시 예정이에요.</div>
-
-              {/* 여백 추가 */}
-              <div className="my-4"></div>
-
-              {/* 자간 1.2배 증가 */}
-              <div style={{ letterSpacing: "0.05em" }} className="font-normal">
-                💌 이메일과 번호를 알려주시면, 정식 오픈 소식을 전해드릴게요!
+              <div>
+                아몬드는 6월에 정식 출시 예정이에요. 💌 이메일과 번호를 알려주시면, 정식 오픈 소식을 전해드릴게요!
               </div>
             </div>
           </div>
