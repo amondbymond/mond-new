@@ -1,6 +1,6 @@
-import { CardCarousel } from "@/components/card-carousel"
+import { AnimatedCardCarousel } from "@/components/animated-card-carousel"
 
-export default function Home() {
+export default function AnimatedPage() {
   // 샘플 카드 데이터
   const cards = [
     {
@@ -22,13 +22,13 @@ export default function Home() {
 
   return (
     <main className="min-h-screen p-4 md:p-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">랜딩 페이지</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">애니메이션 랜딩 페이지</h1>
 
-      {/* 모바일에서 두 번째 카드가 살짝 보이는 캐러셀 */}
+      {/* 모바일에서 두 번째 카드가 살짝 보이는 애니메이션 캐러셀 */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">특별 기능</h2>
         <div className="md:px-12">
-          <CardCarousel cards={cards} className="mb-8" />
+          <AnimatedCardCarousel cards={cards} className="mb-8" />
         </div>
         <p className="text-center text-sm text-gray-500 mt-2">← 좌우로 슬라이드하여 더 많은 내용을 확인하세요 →</p>
       </section>
