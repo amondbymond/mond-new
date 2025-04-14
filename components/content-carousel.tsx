@@ -21,8 +21,10 @@ function ContentCard({ title, description, imageUrl, delay = 0, isVisible = fals
     >
       {/* 카드 컨테이너 */}
       <div className="rounded-3xl overflow-hidden shadow-sm">
-        {/* 이미지 */}
-        <img src={imageUrl || "/placeholder.svg"} alt={title} className="w-full h-auto" />
+        {/* 이미지 - 일반 img 태그 대신 placeholder 사용 */}
+        <div className="w-full h-[280px] bg-gray-100 flex items-center justify-center">
+          <div className="text-gray-400 text-sm">콘텐츠 이미지</div>
+        </div>
 
         {/* 텍스트 영역 - 상단 패딩 줄임 */}
         <div className="px-4 pt-2 pb-4 bg-white">
@@ -43,41 +45,41 @@ export function ContentCarousel() {
     {
       title: "릴스",
       description: "서비스 본질에 집중한 콘텐츠를 기획하세요.",
-      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun01-W3F95mdsdbBgQDTeudQmsKSRZnOriS.png", // fun01.png
+      imageUrl: "/placeholder.svg?height=280&width=280",
     },
     {
       title: "SNS 이벤트",
       description: "신규 고객 모집/신제품 홍보 이벤트를 기획하세요.",
-      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun02-F2FlC1OuRIpXbCnrEdopPgXCIoWXCV.png", // fun02.png
+      imageUrl: "/placeholder.svg?height=280&width=280",
     },
     {
       title: "체험단 이벤트",
       description: "잠재적 고객을 모집하는 이벤트를 기획하세요.",
-      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun03-UcQT1uzxgSjDtIYeZXnKi2UBoGsiRE.png", // fun03.png
+      imageUrl: "/placeholder.svg?height=280&width=280",
     },
     {
       title: "정보성 콘텐츠",
       description: "고객이 필요로 하는 정보를 제공하세요.",
-      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun04-IEijvLykJiX8ghTZesMD7MIFrpwKGZ.png", // fun04.png
+      imageUrl: "/placeholder.svg?height=280&width=280",
     },
     {
       title: "프로모션 기획",
       description: "신제품 홍보를 효과적으로 할 수 있어요.",
-      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun05-1pNwRTUfFWq5kdDSdfRt3pVUIL27oe.png", // fun05.png
+      imageUrl: "/placeholder.svg?height=280&width=280",
     },
     {
       title: "시즈널 콘텐츠",
       description: "지금 이시각, 고객이 가장 관심 있는 주제로 콘텐츠를 기획하세요.",
-      imageUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fun06-iUfTvJLFdbkOCD2N0ysasaMOYZijDS.png", // fun06.png
+      imageUrl: "/placeholder.svg?height=280&width=280",
     },
   ]
 
   return (
-    <section className="px-8 py-16 md:py-20 bg-white">
+    <section className="py-16 md:py-20 bg-white overflow-hidden">
       <div className="container-custom" style={{ maxWidth: "1080px" }}>
         <div
           ref={titleRef}
-          className={`text-center mb-10 transition-all duration-1000 ease-out ${
+          className={`text-center mb-10 px-8 transition-all duration-1000 ease-out ${
             titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -94,7 +96,7 @@ export function ContentCarousel() {
       <div className="relative">
         <div
           ref={cardsRef}
-          className="flex overflow-x-auto pb-8 px-8 hide-scrollbar"
+          className="flex overflow-x-auto pb-8 hide-scrollbar"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {/* 모바일에서 첫 화면이 더 왼쪽으로 이동하도록 패딩 조정 */}
