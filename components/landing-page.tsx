@@ -244,21 +244,21 @@ export default function LandingPage() {
       {/* 푸터 섹션 - 업데이트됨 */}
       <footer id="contact-section" className="py-16 bg-[#F3F3F3] text-center flex-grow break-keep-all">
         <div className="container-custom mx-auto" style={{ maxWidth: "550px" }}>
-          <div className="text-2xl sm:text-3xl leading-loose font-bold text-[#333333] mb-6">
-            <div>지금 이 페이지를 보시는 분께 딱 3일간</div>
+          <div className="mb-6">
+            <div className="text-sm sm:text-base text-[#666666] mb-4">
+              아렌드 콘텐츠 제작 툴, 아몬드가 6월에 정식 출시됩니다.
+            </div>
 
-            {/* 첫 번째 여백 3배 증가 */}
-            <div className="my-6"></div>
+            <div className="text-2xl sm:text-3xl leading-loose font-bold text-[#333333]">
+              <div>아몬드는 6월에 정식 출시 예정이에요.</div>
 
-            <div className="font-normal">🎁 아몬드 1개월 무료 구독 쿠폰</div>
-            <div className="font-normal">📧 트렌드 콘텐츠 뉴스레터</div>
+              {/* 여백 추가 */}
+              <div className="my-4"></div>
 
-            {/* 두 번째 여백 3배 증가 */}
-            <div className="my-6"></div>
-
-            {/* 자간 1.2배 증가 */}
-            <div style={{ letterSpacing: "0.05em" }}>
-              를 무료로 드릴게요. 뉴스레터와 쿠폰을 받을 이메일과 전화번호를 남겨주세요.
+              {/* 자간 1.2배 증가 */}
+              <div style={{ letterSpacing: "0.05em" }} className="font-normal">
+                💌 이메일과 번호를 알려주시면, 정식 오픈 소식을 전해드릴게요!
+              </div>
             </div>
           </div>
 

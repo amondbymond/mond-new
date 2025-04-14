@@ -13,7 +13,7 @@ export function SuccessModal({ isOpen, onClose }: SuccessModalProps) {
       <div className="bg-white p-8 rounded-lg max-w-md w-[90%] text-center shadow-lg break-keep-all">
         <h3 className="text-xl font-semibold mb-4 text-[#333333]">신청이 완료되었습니다</h3>
         <p className="text-base mb-6 text-[#666666]">
-          6월 정식 출시 때, 🎁 1개월 무료 구독 쿠폰을 보내드릴게요. 아몬드를 선택해주셔서 진심으로 감사드립니다.
+          6월 정식 출시 소식을 가장 먼저 알려드릴게요. 아몬드를 선택해주셔서 진심으로 감사드립니다.
         </p>
         <button
           onClick={onClose}
