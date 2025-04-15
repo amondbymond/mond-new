@@ -179,7 +179,7 @@ export default function LandingPage() {
             className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-6 py-2 rounded-lg transition-colors border-none cursor-pointer"
             onClick={scrollToContact}
           >
-            1개월 무료 구독하기
+            사전 런칭 알림 받기
           </button>
         </div>
       </header>
@@ -214,7 +214,7 @@ export default function LandingPage() {
                 className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-6 py-2 sm:px-8 sm:py-3 rounded-lg text-base sm:text-lg transition-colors border-none cursor-pointer break-keep-all"
                 onClick={scrollToContact}
               >
-                1개월 무료 구독하기
+                사전 런칭 알림 받기
               </button>
 
               {/* 말풍선 - 애니메이션 적용 */}
@@ -332,7 +332,7 @@ export default function LandingPage() {
               disabled={isSubmitting}
               className="w-full py-3 sm:py-4 bg-[#f59931] text-white font-semibold rounded-lg hover:bg-[#ff8000] transition-colors border-none cursor-pointer text-sm sm:text-base break-keep-all disabled:opacity-70"
             >
-              {isSubmitting ? "처리 중..." : "체험하기"}
+              {isSubmitting ? "처리 중..." : "오픈 알림 받기"}
             </button>
           </form>
         </div>
