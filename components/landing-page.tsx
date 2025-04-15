@@ -179,7 +179,9 @@ export default function LandingPage() {
             className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-6 py-2 rounded-lg transition-colors border-none cursor-pointer"
             onClick={scrollToContact}
           >
-            사전 런칭 알림 받기
+            사전 런칭
+            <br />
+            알림 받기
           </button>
         </div>
       </header>
