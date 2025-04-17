@@ -351,19 +351,6 @@ export default function LandingPage() {
                 경기도 용인시 수지구 상현로 5, 상현프라자 402-772호 | jerry@mond.io.kr
               </p>
             </div>
-            <div className="flex justify-center gap-4">
-              <a href="#" className="text-sm text-[#666666] hover:text-[#ff8000] no-underline">
-                이용약관
-              </a>
-              <span className="text-[#666666]">|</span>
-              <a href="#" className="text-sm text-[#666666] hover:text-[#ff8000] no-underline">
-                개인정보 처리방침
-              </a>
-              <span className="text-[#666666]">|</span>
-              <a href="#" className="text-sm text-[#666666] hover:text-[#ff8000] no-underline">
-                스팸메일정책
-              </a>
-            </div>
           </div>
         </div>
       </footer>
