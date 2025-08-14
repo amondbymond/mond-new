@@ -9,6 +9,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/service/:path*',
+        destination: 'https://main.dpvdj8dsmc7us.amplifyapp.com/service/:path*',
+      },
+    ]
+  },
 }
 
 export default nextConfig
