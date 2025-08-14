@@ -175,17 +175,12 @@ export default function LandingPage() {
               <img src="/logo.png" alt="amond 로고" className="h-8 w-auto" />
             </div>
           </div>
-          <button
-            className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-6 py-2 rounded-lg transition-colors border-none cursor-pointer"
-            onClick={scrollToContact}
+          <a
+            href="/service"
+            className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-6 py-2 rounded-lg transition-colors border-none cursor-pointer inline-block"
           >
-            <span className="hidden sm:inline">사전 런칭 알림 받기</span>
-            <span className="sm:hidden">
-              사전 런칭
-              <br />
-              알림 받기
-            </span>
-          </button>
+            서비스 사용하기
+          </a>
         </div>
       </header>
 
@@ -215,12 +210,12 @@ export default function LandingPage() {
             </p>
 
             <div className="flex flex-col items-center">
-              <button
-                className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-6 py-2 sm:px-8 sm:py-3 rounded-lg text-base sm:text-lg transition-colors border-none cursor-pointer break-keep-all"
-                onClick={scrollToContact}
+              <a
+                href="/service"
+                className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-6 py-2 sm:px-8 sm:py-3 rounded-lg text-base sm:text-lg transition-colors border-none cursor-pointer break-keep-all inline-block"
               >
-                사전 런칭 알림 받기
-              </button>
+                서비스 사용하기
+              </a>
 
               {/* 말풍선 - 애니메이션 적용 */}
               <div className="mt-4">
