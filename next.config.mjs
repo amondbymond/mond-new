@@ -12,17 +12,12 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/service/:path*',
-        destination: 'https://main.dpvdj8dsmc7us.amplifyapp.com/service/:path*',
+        source: '/service',
+        destination: 'https://main.dpvdj8dsmc7us.amplifyapp.com/',
       },
-    ]
-  },
-  async redirects() {
-    return [
       {
-        source: '/service/service/:path*',
-        destination: '/service/:path*',
-        permanent: false,
+        source: '/service/:path+',
+        destination: 'https://main.dpvdj8dsmc7us.amplifyapp.com/:path+',
       },
     ]
   },
