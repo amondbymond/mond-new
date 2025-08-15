@@ -211,7 +211,7 @@ export default function LandingPage() {
 
             <div className="flex flex-col items-center">
               <a
-                href="/service"
+                href="https://service.mond.io.kr"
                 className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-6 py-2 sm:px-8 sm:py-3 rounded-lg text-base sm:text-lg transition-colors border-none cursor-pointer break-keep-all inline-block"
               >
                 서비스 사용하기
