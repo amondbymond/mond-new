@@ -9,18 +9,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  async rewrites() {
-    return [
-      {
-        source: '/service',
-        destination: 'https://main.dpvdj8dsmc7us.amplifyapp.com/',
-      },
-      {
-        source: '/service/:path+',
-        destination: 'https://main.dpvdj8dsmc7us.amplifyapp.com/:path+',
-      },
-    ]
-  },
+  // Removed rewrites - using subdomain instead
 }
 
 export default nextConfig

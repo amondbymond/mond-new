@@ -176,7 +176,7 @@ export default function LandingPage() {
             </div>
           </div>
           <a
-            href="/service"
+            href="https://service.mond.io.kr"
             className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-6 py-2 rounded-lg transition-colors border-none cursor-pointer inline-block"
           >
             서비스 사용하기
