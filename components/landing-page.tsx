@@ -199,7 +199,7 @@ export default function LandingPage() {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-[58px] font-bold text-[#333333] mt-6 mb-8 break-keep-all w-full"
               style={{ lineHeight: "1.25" }}
             >
-              터지는 SNS 텍스트 콘텐츠,
+              터지는 SNS 콘텐츠,
               <br />
               아몬드 하나면 끝.
             </h2>
