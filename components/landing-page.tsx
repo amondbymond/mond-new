@@ -246,12 +246,12 @@ export default function LandingPage() {
         <div className="container-custom mx-auto" style={{ maxWidth: "550px" }}>
           <div className="mb-6">
             <div className="text-sm sm:text-base text-[#666666] mb-4">
-              아렌드 콘텐츠 제작 툴, 아몬드가 6월에 정식 출시됩니다.
+              SNS 콘텐츠 제작 툴, 아몬드가 10월에 정식 출시됩니다.
             </div>
 
             <div className="text-2xl sm:text-3xl leading-loose font-bold text-[#333333]">
               <div>
-                아몬드는 6월에 정식 출시 예정이에요. 💌 이메일과 번호를 알려주시면, <br />
+                아몬드는 10월에 정식 출시 예정이에요. 💌 이메일과 번호를 알려주시면, <br />
                 정식 오픈 소식을 전해드릴게요!
               </div>
             </div>
