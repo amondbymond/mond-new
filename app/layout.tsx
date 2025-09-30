@@ -41,7 +41,7 @@ export default function RootLayout({
       <head>
         <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
       </head>
-      <body>{
+      <body>
       {children}
         </body>
         
@@ -58,14 +58,9 @@ export default function RootLayout({
             gtag('config', 'G-1T0LX8V678');
           `}
         </Script>
-     </body>
+      </body>
     </html>
   )
 }
 
 import "./globals.css"
-
-import "./globals.css"
-
-
-import './globals.css'
