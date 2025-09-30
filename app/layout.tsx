@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
+import Script from "next/script"
 
 export const metadata: Metadata = {
   title: "아몬드 - 텍스트 기반 AI 콘텐츠 제작 서비스",
@@ -40,7 +41,24 @@ export default function RootLayout({
       <head>
         <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
       </head>
-      <body>{children}</body>
+      <body>{
+      {children}
+        </body>
+        
+        {/* ✅ 구글 애널리틱스 코드 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1T0LX8V678"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1T0LX8V678');
+          `}
+        </Script>
+     </body>
     </html>
   )
 }
