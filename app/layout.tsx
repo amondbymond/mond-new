@@ -4,7 +4,7 @@ import "./globals.css"
 import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: "아몬드 - 텍스트 기반 AI 콘텐츠 제작 서비스",
+  title: "아몬드랩 - 텍스트 기반 AI 콘텐츠 제작 서비스",
   description: "주제별 트렌드에 딱 맞는 터지는 콘텐츠 기획을 쉽고 간편하게 시작해보세요!",
   icons: {
     icon: [
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "아몬드 - 텍스트 기반 AI 콘텐츠 제작 서비스",
+    title: "아몬드랩 - 텍스트 기반 AI 콘텐츠 제작 서비스",
     description: "주제별 트렌드에 딱 맞는 터지는 콘텐츠 기획을 쉽고 간편하게 시작해보세요!",
     images: [
       {
         url: "/og-image.jpeg",
         width: 1200,
         height: 630,
-        alt: "아몬드 - 텍스트 기반 AI 콘텐츠 제작 서비스",
+        alt: "아몬드랩 - 텍스트 기반 AI 콘텐츠 제작 서비스",
       },
     ],
     type: "website",
@@ -39,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <meta name="naver-site-verification" content="d192255a23327d76b12ae5c368c9020f9be869a9" />
         <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
       </head>
       <body>
