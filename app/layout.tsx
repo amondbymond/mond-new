@@ -1,7 +1,7 @@
-import type React from "react"
-import type { Metadata } from "next"
-import "./globals.css"
-import Script from "next/script"
+import type React from "react";
+import type { Metadata } from "next";
+import Script from "next/script";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "아몬드랩 - 텍스트 기반 AI 콘텐츠 제작 서비스",
@@ -17,36 +17,23 @@ export const metadata: Metadata = {
   openGraph: {
     title: "아몬드랩 - 텍스트 기반 AI 콘텐츠 제작 서비스",
     description: "주제별 트렌드에 딱 맞는 터지는 콘텐츠 기획을 쉽고 간편하게 시작해보세요!",
-    images: [
-      {
-        url: "/og-image.jpeg",
-        width: 1200,
-        height: 630,
-        alt: "아몬드랩 - 텍스트 기반 AI 콘텐츠 제작 서비스",
-      },
-    ],
+    images: [{ url: "/og-image.jpeg", width: 1200, height: 630, alt: "아몬드랩" }],
     type: "website",
     locale: "ko_KR",
   },
-  generator: "v0.dev",
-}
+  // 🔑 네이버 소유확인 메타태그를 Metadata API로 주입
+  other: {
+    "naver-site-verification": "d192255a23327d76b12ae5c368c9020f9be869a9",
+  },
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
-      <head>
-        <meta name="naver-site-verification" content="d192255a23327d76b12ae5c368c9020f9be869a9" />
-        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-      </head>
       <body>
-      {children}
-        </body>
-        
-        {/* ✅ 구글 애널리틱스 코드 */}
+        {children}
+
+        {/* GA 스크립트는 body 안쪽, 닫는 태그 바로 위에 두는 게 깔끔 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1T0LX8V678"
           strategy="afterInteractive"
@@ -61,7 +48,5 @@ export default function RootLayout({
         </Script>
       </body>
     </html>
-  )
+  );
 }
-
-import "./globals.css"
