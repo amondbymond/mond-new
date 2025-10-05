@@ -172,7 +172,7 @@ export default function LandingPage() {
         <div className="container-custom flex justify-between items-center w-full">
           <div>
             <div className="h-8 flex items-center">
-              <img src="/logo.png" alt="amond 로고" className="h-8 w-auto" />
+              <img src="/logo.svg" alt="amond 로고" className="h-8 w-auto" />
             </div>
           </div>
           <a
