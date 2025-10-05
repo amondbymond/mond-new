@@ -172,7 +172,7 @@ export default function LandingPage() {
         <div className="container-custom flex justify-between items-center w-full">
           <div>
             <div className="h-8 flex items-center">
-              <img src="/logo.svg" alt="amond 로고" className="h-8 w-auto" />
+              <img src="/logo.svg" alt="amondlab 로고" className="h-8 w-auto" />
             </div>
           </div>
           <a
@@ -201,12 +201,12 @@ export default function LandingPage() {
             >
               터지는 SNS 콘텐츠,
               <br />
-              아몬드 하나면 끝.
+              아몬드랩 하나면 끝.
             </h2>
             <p className="text-base sm:text-lg text-[#252525] mb-10 break-keep-all leading-moderate">
               팔로워 증가, 매출 증진, 상품 홍보까지. SNS 성장을 위한 콘텐츠가 필요하신가요?
               <br />
-              아이디어가 없어도, 시간이 없어도 괜찮아요. 아몬드가 작성을 도와드려요.
+              아이디어가 없어도, 시간이 없어도 괜찮아요. 아몬드랩이 작성을 도와드려요.
             </p>
 
             <div className="flex flex-col items-center">
@@ -251,7 +251,7 @@ export default function LandingPage() {
 
             <div className="text-2xl sm:text-3xl leading-loose font-bold text-[#333333]">
               <div>
-                아몬드는 10월에 정식 출시 예정이에요. 💌 이메일과 번호를 알려주시면, <br />
+                아몬드랩은 10월에 정식 출시 예정이에요. 💌 이메일과 번호를 알려주시면, <br />
                 정식 오픈 소식을 전해드릴게요!
               </div>
             </div>
