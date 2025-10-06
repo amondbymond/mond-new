@@ -23,7 +23,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
   },
-  // 🔑 네이버 소유확인 메타태그 — Metadata API로 주입(가장 안전)
+
+  // ✅ 여기 3줄이 핵심 (정규 URL/인덱싱 허용)
+  metadataBase: new URL("https://mond.io.kr"),
+  alternates: { canonical: "https://mond.io.kr" },
+  robots: { index: true, follow: true },
+
+  // 🔑 네이버 소유확인 메타태그 — Metadata API로 주입
   other: {
     "naver-site-verification": "d192255a23327d76b12ae5c368c9020f9be869a9",
   },
