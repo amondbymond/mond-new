@@ -4,7 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "아몬드랩 - 텍스트 기반 AI 콘텐츠 제작 서비스",
+  title: "마케팅 AI 에이전트, 아몬드랩",
   description:
     "주제별 트렌드에 딱 맞는 터지는 콘텐츠 기획을 쉽고 간편하게 시작해보세요!",
   icons: {
