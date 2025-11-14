@@ -170,27 +170,20 @@ export default function LandingPage() {
       {/* 네비게이션 바 */}
       <header className="fixed top-0 left-0 right-0 border-b border-[#e6e8eb] bg-white z-50">
   <div className="flex justify-between items-center w-full max-w-[1200px] mx-auto px-2 py-3 md:px-8 md:py-4">
+
     <div className="h-8 flex items-center">
       <img src="/logo.svg" alt="amondlab 로고" className="h-8 w-auto" />
     </div>
 
     <a
       href="https://service.mond.io.kr"
-      className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-3 py-2 text-sm md:px-6 md:py-2 md:text-base rounded-lg whitespace-nowrap ml-3"
+      className="bg-[#ff8000] hover:bg-[#f59931] text-white px-3 py-2 text-sm font-medium md:px-6 md:py-2 md:text-base rounded-lg whitespace-nowrap ml-3 inline-block"
     >
       서비스 사용하기
     </a>
+
   </div>
 </header>
-          </div>
-          <a
-            href="https://service.mond.io.kr"
-            className="bg-[#ff8000] hover:bg-[#f59931] text-white px-3 py-2 font-medium md:px-6 md:py-2 rounded-lg transition-colors border-none cursor-pointer inline-block ml-2"
-          >
-            서비스 사용하기
-          </a>
-        </div>
-      </header>
 
       {/* 메인 히어로 섹션 */}
       <main className="px-8 pt-32 pb-16 md:pt-36 md:pb-20 relative bg-gradient-to-b from-white to-[#FAFAFA]">
