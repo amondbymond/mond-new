@@ -169,7 +169,7 @@ export default function LandingPage() {
     <div className="min-h-screen flex flex-col break-keep-all">
       {/* 네비게이션 바 */}
       <header className="fixed top-0 left-0 right-0 border-b border-[#e6e8eb] bg-white z-50">
-  <div className="flex justify-between items-center w-full max-w-[1200px] mx-auto px-1 py-3 md:px-8 md:py-4">
+  <div className="flex justify-between items-center w-full max-w-[1200px] mx-auto px-0 py-3 md:px-8 md:py-4">
 
     <div className="h-8 flex items-center">
       <img src="/logo.svg" alt="amondlab 로고" className="h-8 w-auto" />
