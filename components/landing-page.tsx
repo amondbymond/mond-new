@@ -168,7 +168,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col break-keep-all">
       {/* 네비게이션 바 */}
-      <header className="fixed top-0 left-0 right-0 flex justify-between items-center px-8 py-4 border-b border-[#e6e8eb] bg-white z-50">
+      <header className="fixed top-0 left-0 right-0 flex justify-between items-center border-b border-[#e6e8eb] bg-white z-50">
         <div className="container-custom flex justify-between items-center w-full">
           <div>
             <div className="h-8 flex items-center">
@@ -177,7 +177,7 @@ export default function LandingPage() {
           </div>
           <a
             href="https://service.mond.io.kr"
-            className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium px-6 py-2 rounded-lg transition-colors border-none cursor-pointer inline-block"
+            className="bg-[#ff8000] hover:bg-[#f59931] text-white font-medium md:px-6 md:py-2 rounded-lg transition-colors border-none cursor-pointer inline-block"
           >
             서비스 사용하기
           </a>
@@ -246,13 +246,13 @@ export default function LandingPage() {
         <div className="container-custom mx-auto" style={{ maxWidth: "550px" }}>
           <div className="mb-6">
             <div className="text-sm sm:text-base text-[#666666] mb-4">
-              SNS 콘텐츠 제작 툴, 아몬드가 10월에 정식 출시됩니다.
+              SNS 마케팅 트렌드 인사이트와 꿀팁을 전수할게요!
             </div>
 
             <div className="text-2xl sm:text-3xl leading-loose font-bold text-[#333333]">
               <div>
-                아몬드랩은 10월에 정식 출시 예정이에요. 💌 이메일과 번호를 알려주시면, <br />
-                정식 오픈 소식을 전해드릴게요!
+                아몬드랩, 지금 바로 시작해보세요.<br />
+                마케팅 자동화 인사이트와 기능 업데이트를 가장 빠르게 받아보실 수 있어요.
               </div>
             </div>
           </div>
@@ -332,7 +332,7 @@ export default function LandingPage() {
               disabled={isSubmitting}
               className="w-full py-3 sm:py-4 bg-[#f59931] text-white font-semibold rounded-lg hover:bg-[#ff8000] transition-colors border-none cursor-pointer text-sm sm:text-base break-keep-all disabled:opacity-70"
             >
-              {isSubmitting ? "처리 중..." : "오픈 알림 받기"}
+              {isSubmitting ? "처리 중..." : "마케팅 팁 받기"}
             </button>
           </form>
         </div>
